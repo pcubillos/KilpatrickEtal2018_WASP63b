@@ -1,3 +1,14 @@
+# Pyrat Bay related files:
+pyratbay/
+repack/
+*.tli
+*.atm
+run*/*.dat
+run*/*.npz
+run*/*.png
+
+*.swp
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

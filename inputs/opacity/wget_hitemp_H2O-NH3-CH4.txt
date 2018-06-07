@@ -1,0 +1,12 @@
+https://www.cfa.harvard.edu/HITRAN/HITEMP-2010/H2O_line_list/01_09000-11000_HITEMP2010.zip
+https://www.cfa.harvard.edu/HITRAN/HITEMP-2010/H2O_line_list/01_08500-09000_HITEMP2010.zip
+https://www.cfa.harvard.edu/HITRAN/HITEMP-2010/H2O_line_list/01_08000-08500_HITEMP2010.zip
+https://www.cfa.harvard.edu/HITRAN/HITEMP-2010/H2O_line_list/01_07500-08000_HITEMP2010.zip
+https://www.cfa.harvard.edu/HITRAN/HITEMP-2010/H2O_line_list/01_07000-07500_HITEMP2010.zip
+https://www.cfa.harvard.edu/HITRAN/HITEMP-2010/H2O_line_list/01_06500-07000_HITEMP2010.zip
+https://www.cfa.harvard.edu/HITRAN/HITEMP-2010/H2O_line_list/01_06000-06500_HITEMP2010.zip
+https://www.cfa.harvard.edu/HITRAN/HITEMP-2010/H2O_line_list/01_05500-06000_HITEMP2010.zip
+https://www.cfa.harvard.edu/HITRAN/HITEMP-2010/H2O_line_list/01_05000-05500_HITEMP2010.zip
+https://www.cfa.harvard.edu/HITRAN/HITRAN2012/HITRAN2012/By-Molecule/Compressed-files/06_hit12.zip
+https://www.cfa.harvard.edu/HITRAN/HITRAN2012/HITRAN2012/By-Molecule/Compressed-files/11_hit12.zip
+
