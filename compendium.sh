@@ -60,25 +60,41 @@ python $topdir/pyratbay/pbay.py -c opacity_H2O-NH3-CH4-HCN.cfg
 
 # Retrieval for nominal dataset:
 cd $topdir/run02_BKM/
-python $topdir/pyratbay/pbay.py -c mcmc_bkm_wm-00mha-ci.cfg
-$topdir/pyratbay/pbay.py -c mcmc_bkm_wm-00m0a-ci.cfg
+python $topdir/pyratbay/pbay.py -c mcmc_bkm_wm-00mha-ci.cfg  # Nominal
+python $topdir/pyratbay/pbay.py -c mcmc_bkm_wm-00m0a-ci.cfg
+python $topdir/pyratbay/pbay.py -c mcmc_bkm_w0-000h0-ci.cfg
+python $topdir/pyratbay/pbay.py -c mcmc_bkm_wm-000h0-0i.cfg
+python $topdir/pyratbay/pbay.py -c mcmc_bkm_w0-000h0-0i.cfg
 
 
 # Retrieval for KBS dataset:
 cd $topdir/run03_KBS/
-$topdir/pyratbay/pbay.py -c mcmc_kbs_wm-00mha-ci.cfg
+python $topdir/pyratbay/pbay.py -c mcmc_kbs_wm-00mha-ci.cfg  # Nominal
+python $topdir/pyratbay/pbay.py -c mcmc_kbs_w0-00000-0i.cfg  # low BIC
+python $topdir/pyratbay/pbay.py -c mcmc_kbs_w0-00000-ci.cfg
+python $topdir/pyratbay/pbay.py -c mcmc_kbs_wm-00000-0i.cfg
 python $topdir/pyratbay/pbay.py -c mcmc_kbs_w0-000h0-0i.cfg
-python $topdir/pyratbay/pbay.py -c mcmc_kbs_w0-00000-0i.cfg
 
 
 # Retrieval for HRW dataset:
 cd $topdir/run04_HRW/
-$topdir/pyratbay/pbay.py -c mcmc_hrw_wm-00mha-ci.cfg
-$topdir/pyratbay/pbay.py -c mcmc_hrw_w0-000h0-ci.cfg
-$topdir/pyratbay/pbay.py -c mcmc_hrw_w0-00000-ci.cfg
+python $topdir/pyratbay/pbay.py -c mcmc_hrw_wm-00mha-ci.cfg  # Nominal
+python $topdir/pyratbay/pbay.py -c mcmc_hrw_w0-000h0-ci.cfg  # low BIC
+python $topdir/pyratbay/pbay.py -c mcmc_hrw_wm-000h0-0i.cfg
+python $topdir/pyratbay/pbay.py -c mcmc_hrw_w0-000h0-0i.cfg
+python $topdir/pyratbay/pbay.py -c mcmc_hrw_w0-00000-ci.cfg
+
+
+# Compute spectrum percentiles for nominal model:
+cd $topdir/run02_BKM/
+python $topdir/code/percentile.py
 
 
 # Thermochemical-equilibrium abundances plot:
 cd $topdir
 python $topdir/code/fig_abundances.py
+
+# Posteriors plot:
+cd $topdir/run02_BKM/
+python $topdir/code/fig_posteriors.py
 
