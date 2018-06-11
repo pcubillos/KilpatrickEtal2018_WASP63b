@@ -84,6 +84,10 @@ python $topdir/pyratbay/pbay.py -c mcmc_hrw_wm-000h0-0i.cfg
 python $topdir/pyratbay/pbay.py -c mcmc_hrw_w0-000h0-0i.cfg
 python $topdir/pyratbay/pbay.py -c mcmc_hrw_w0-00000-ci.cfg
 
+# Flat fit:
+cd $topdir/code/
+python $topdir/code/flatfit.py > flatfit.dat
+
 
 # Compute spectrum percentiles for nominal model:
 cd $topdir/run02_BKM/
