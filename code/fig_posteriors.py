@@ -1,3 +1,5 @@
+#! /usr/bin/env python
+
 import sys
 import os
 import numpy as np
@@ -90,7 +92,6 @@ phigh = gaussf(phigh, sigma)
 
 # ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 # Plot:
-
 plt.figure(0, (8.5, 11))
 plt.clf()
 rect = [0.15, 0.1, 0.95, 0.71]
@@ -110,10 +111,14 @@ for i in np.arange(npars):
 # Redefine rect for pairwise panels:
 rect[2], rect[3] = ax0.get_position().xmax, ax0.get_position().ymax
 
+ranges = [None]*8
+ranges[6] = (2.31, 15)
+
 # Pairwise posteriors:
-mp.pairwise(post, pname, rect=rect, fs=fs)
+mp.pairwise(post, pname, rect=rect, fs=fs, ranges=ranges)
 # Marginal posteriors:
-mp.histogram(post, pname, percentile=0.683, axes=axes, fs=fs, lw=lw)
+mp.histogram(post, pname, percentile=0.683, axes=axes, fs=fs,
+             ranges=ranges, lw=lw)
 for i in np.arange(npars-1):
   axes[i].set_xticklabels([])
   axes[i].set_xlabel("")
@@ -131,6 +136,4 @@ plt.ylabel(r"$(R_{\rm p}/R_*)^2$", fontsize=13)
 plt.xlabel(r"$\rm Wavelength\ \ (microns)$", fontsize=13)
 plt.yticks(size=11)
 plt.xticks(size=11)
-
 plt.savefig("../plots/WASP-63b_all_posteriors.pdf", bbox_inches='tight')
-
